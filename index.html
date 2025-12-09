@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.2/semantic.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.2/semantic.min.js"></script>
@@ -16,7 +18,9 @@
 </head>
 <body>
       <div id="audioUnlock">
-  Click to enable sound
+   
+  <p>Click to enable sound <br>
+    <span class="note">*due to browser restriction we have to prompt the user to interact with the page before audio could be enabled<br> - audio present in this page will be in the form of sound effects for hovering/clicking <br>   (You can always disable it by clicking the mute button on the bottom right)</span></p>
 </div>
       <nav class="floating-nav animate__animated animate__fadeInDown">
         <img src="assets/waguri.png" alt="waguri" class="logo">
@@ -25,6 +29,10 @@
     <a href="#heart">Heart</a>
   </nav>
 
+
+<button id="muteButton" title="Mute/Unmute">
+  <i class="fas fa-volume-up"></i>
+</button>
 
 </body>
     <script src="js/index.js"></script>

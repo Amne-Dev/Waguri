@@ -7,7 +7,7 @@
   width: fit-content;
   background: var(--foreground);
   backdrop-filter: blur(8px);
-  padding: 0.7rem 1.5rem;
+  padding: 1.4rem 3rem;
   border-radius: 12px;
   display: flex;
   gap: 1.5rem;
@@ -15,13 +15,15 @@
   z-index: 1000;
   align-items: center;
   align-content: center;
+  font-size: 24px;
+  filter: drop-shadow(0px 4px 10px rgba(255,255,255,0.15));
 
 }
 
 .floating-nav a {
 
   position: relative;
-  padding: 0.4rem 0.8rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 8px;
   transition: all 0.25s ease;
   text-decoration: none;
@@ -51,11 +53,12 @@
 }
 
 .logo{
-  height: 48px;
+  height: 56px;
   cursor: pointer;
   animation: logoJump 2s infinite ease-in-out;
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 0px #fff);
+  user-select: none;
 }
 
 .logo:hover {

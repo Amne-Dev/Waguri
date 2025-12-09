@@ -1,10 +1,11 @@
 :root{
     --background: #D89090;
     --text: #f4ebff;
-    --foreground: #A86078;
+    --foreground: /*#A86078*/#A56868;
     --extra: #784848;
     --extra2: #76645B; /*Idea: Use it for the footer as this is the color of her stockings*/
     --extra3: #47434C;
+    --logo-width: 56px;
 }
 
 
@@ -16,6 +17,17 @@ body{
     color: var(--text);
 }
 
+img{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.logo {
+  user-select: none;
+  -webkit-user-drag: none;
+}
 #audioUnlock {
   position: fixed;
   inset: 0;
@@ -40,3 +52,61 @@ body{
   margin-bottom: 1rem;
 }
 
+.note {
+  color: #7a7381;
+  font-size: 20px;
+}
+
+#muteButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  color: var(--text);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+#muteButton:hover {
+  transform: scale(1.2);
+}
+
+.logo-clone {
+  position: fixed;
+  width: 48px; /* same as original logo */
+  height: 48px;
+  pointer-events: none; /* so they don’t block clicks */
+  z-index: 999;
+  transform-origin: center;
+  animation: flyLogo 1s forwards ease-out;
+}
+
+@keyframes flyLogo {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) rotate(var(--rotate));
+    opacity: 0;
+  }
+}
+
+.logo-confetti {
+  position: fixed;
+  width: var(--logo-width);
+  height: var(--logo-width);
+  pointer-events: none;
+  z-index: 999;
+  transform-origin: center;
+  will-change: transform, opacity;
+}

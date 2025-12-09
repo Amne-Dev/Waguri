@@ -23,10 +23,20 @@
     <span class="note">*due to browser restriction we have to prompt the user to interact with the page before audio could be enabled<br> - audio present in this page will be in the form of sound effects for hovering/clicking <br>   (You can always disable it by clicking the mute button on the bottom right)</span></p>
 </div>
       <nav class="floating-nav animate__animated animate__fadeInDown">
-        <img src="assets/waguri.png" alt="waguri" class="logo">
-    <a href="#life">Life</a>
-    <a href="#sweets">Sweets</a>
-    <a href="#heart">Heart</a>
+        <div class="nav-brand">
+          <img src="assets/waguri.png" alt="waguri" class="logo">
+          <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="#life">Life</a>
+          <a href="#sweets">Sweets</a>
+          <a href="#heart">Heart</a>
+          <a href="#read">Read</a>
+        </div>
   </nav>
 
 
@@ -62,7 +72,7 @@
             <div class="section-media animate__animated animate__fadeInRight animate__delay-1s">
               <figure class="image-frame">
                 <img src="assets/waguri.webp" alt="Kaoruko Waguri character illustration" class="illustration">
-                <figcaption>Petite, wavy black-purple hair, and a headband&mdash;exactly as described on the wiki.</figcaption>
+                <figcaption>Petite, wavy black-purple hair, and a headband</figcaption>
               </figure>
               <div class="badge-row">
                 <span class="badge">Kikyo honor roll</span>
@@ -143,6 +153,21 @@
               <h3>Waguri Family</h3>
               <p>Father Yosuke, mother Fuko, and little brother Kosuke motivate everything&mdash;from her scholarship grind to her calm demeanor.</p>
             </article>
+          </div>
+        </section>
+
+        <section id="read" class="section section-read">
+          <div class="section-header animate__animated animate__fadeInDown">
+            <p class="eyebrow">Catch up</p>
+            <h2>Read the manga</h2>
+            <p class="section-lede">Ready to meet Kaoruko (and Rintaro) on the page? Dive into the latest chapters directly.</p>
+          </div>
+          <div class="read-callout animate__animated animate__fadeInUp">
+            <div>
+              <h3>read.waguri.me</h3>
+              <p>Unofficial reader that beams you straight to <em>The Fragrant flower blooms with dignity</em></p>
+            </div>
+            <a class="read-button" href="https://read.waguri.me" target="_blank" rel="noopener">Start reading</a>
           </div>
         </section>
       </main>

@@ -5,8 +5,9 @@
   right: 0;
   margin: auto;
   width: fit-content;
-  background: var(--foreground);
-  backdrop-filter: blur(8px);
+  background: linear-gradient(120deg, rgba(255,255,255,0.35), rgba(168,96,120,0.95));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.35);
   padding: 1.4rem 3rem;
   border-radius: 12px;
   display: flex;
@@ -16,7 +17,6 @@
   align-items: center;
   align-content: center;
   font-size: 24px;
-  filter: drop-shadow(0px 4px 10px rgba(255,255,255,0.15));
 
 }
 

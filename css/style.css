@@ -1,0 +1,30 @@
+:root{
+    --background: #D89090;
+    --text: #f4ebff;
+    --foreground: #A86078;
+    --extra: #784848;
+    --extra2: #76645B; /*Idea: Use it for the footer as this is the color of her stockings*/
+    --extra3: #47434C;
+}
+
+
+body{
+    font-family: "SoapyHands", sans-serif;
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+}
+
+.section {
+  padding: 100px 2rem 50px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.title {
+  color: #7a4b8f;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+

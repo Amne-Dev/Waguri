@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://amne-dev.github.io/Waguri/sitemap.xml
+Sitemap: https://waguri.me/sitemap.xml

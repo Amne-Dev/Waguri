@@ -1,18 +1,18 @@
 .floating-nav {
   position: fixed;
-  top: 20px;
+  top: 0;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  width: fit-content;
-  background: linear-gradient(120deg, rgba(255,255,255,0.35), rgba(168,96,120,0.95));
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.35);
+  margin: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--extra3);
   padding: 1.4rem 3rem;
-  border-radius: 12px;
+  border-radius: 0;
   display: flex;
   gap: 1.5rem;
-  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(58, 46, 42, 0.08);
   z-index: 1000;
   align-items: center;
   align-content: center;
@@ -30,17 +30,32 @@
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  flex: 1;
+}
+
+.nav-links::after {
+  content: "";
+  flex: 1;
+  min-width: 60px;
+  height: 12px;
+  margin-left: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='12' viewBox='0 0 24 12'%3E%3Cpath d='M0 6 C3 0 9 0 12 6 C15 12 21 12 24 6' fill='none' stroke='%23D8B4A0' stroke-width='1.8'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 24px 12px;
+  background-position: center;
+  opacity: 0.95;
+  pointer-events: none;
 }
 
 .floating-nav a {
 
   position: relative;
   padding: 0.8rem 1.6rem;
-  border-radius: 8px;
+  border-radius: 4px;
   transition: all 0.25s ease;
   text-decoration: none;
   font-weight: bold;
-  color: var(--text);
+  color: var(--extra);
   align-self: center;
 }
 
@@ -48,15 +63,18 @@
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 2px solid var(--extra);
   transform: scale(0.6);
   opacity: 0;
   transition: all 0.25s ease;
 }
 
-.floating-nav a:hover {
-  color: var(--extra);
+.floating-nav a:hover,
+.floating-nav a:focus-visible,
+.floating-nav a:active {
+  color: var(--extra2);
+  background: rgba(246, 198, 200, 0.25);
 }
 
 .floating-nav a:hover::before {
@@ -69,7 +87,7 @@
   cursor: pointer;
   animation: logoJump 2s infinite ease-in-out;
   transform-style: preserve-3d;
-  filter: drop-shadow(1px 1px 0px #fff);
+  filter: drop-shadow(1px 1px 0px #d8b4a0);
   user-select: none;
 }
 
@@ -111,9 +129,9 @@
   gap: 5px;
   width: 42px;
   height: 42px;
-  border-radius: 12px;
-  border: 1px solid rgba(244,235,255,0.5);
-  background: rgba(24,14,19,0.3);
+  border-radius: 6px;
+  border: 1px solid var(--extra3);
+  background: var(--foreground);
   cursor: pointer;
   justify-content: center;
   align-items: center;
@@ -124,8 +142,8 @@
   display: block;
   width: 60%;
   height: 3px;
-  border-radius: 999px;
-  background: var(--text);
+  border-radius: 2px;
+  background: var(--extra2);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -143,7 +161,7 @@
 
 @media (max-width: 900px) {
   .floating-nav {
-    width: calc(100% - 1.5rem);
+    width: 100%;
     padding: 1rem 1.4rem;
     font-size: 20px;
     justify-content: space-between;
@@ -160,9 +178,9 @@
 
 @media (max-width: 640px) {
   .floating-nav {
-    width: calc(100% - 1rem);
+    width: 100%;
     flex-direction: column;
-    top: 12px;
+    top: 0;
     gap: 0.8rem;
   }
 
@@ -172,6 +190,10 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+  }
+
+  .nav-links::after {
+    display: none;
   }
 
   .nav-links.open {
